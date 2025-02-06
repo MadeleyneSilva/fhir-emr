@@ -25,6 +25,22 @@ export function useGeneralInformationDashboard(patient: Patient) {
     }, []);
 
     const bmi = isSuccess(bmiRD) ? bmiRD.data[0]?.valueQuantity?.value : undefined;
+    const sexKey = _.lowerCase(patient.gender);
+
+    const translatedSex = (() => {
+        switch (sexKey) {
+            case 'male':
+                return t`Male`;
+            case 'female':
+                return t`Female`;
+            case 'other':
+                return t`Other`;
+            case 'unknown':
+                return t`Unknown`;
+            default:
+                return t`Unknown`;
+        }
+    })();
 
     const patientDetails = [
         {
@@ -35,7 +51,7 @@ export function useGeneralInformationDashboard(patient: Patient) {
         },
         {
             title: t`Sex`,
-            value: _.upperFirst(patient.gender),
+            value: translatedSex,
         },
         {
             title: t`BMI`,

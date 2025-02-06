@@ -11,8 +11,8 @@ import s from './SignIn.module.scss';
 import { S } from './SignIn.styles';
 
 enum SignInService {
-    EMR = 'EMR',
-    PatientPortal = 'Patient Portal',
+    EMR = 'RCE',
+    PatientPortal = 'Portal Paciente',
 }
 
 function authorize(state?: OAuthState) {

@@ -210,14 +210,14 @@ msgid "Batch Number"
 msgstr ""
 
 #: src/components/BaseQuestionnaireResponseForm/widgets/QuestionDateTime.stories.tsx:37
-#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:31
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:47
 #: src/containers/PatientList/index.tsx:85
 #: src/containers/PatientResourceListExample/index.tsx:48
 #: src/containers/PatientResourceListExample/index.tsx:82
 msgid "Birth date"
 msgstr ""
 
-#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:41
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:57
 msgid "BMI"
 msgstr ""
 
@@ -555,7 +555,7 @@ msgid "Edit practitioner data"
 msgstr ""
 
 #: src/containers/App/DefaultUserWithNoRoles.tsx:25
-#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:49
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:65
 msgid "Email"
 msgstr ""
 
@@ -633,6 +633,10 @@ msgstr ""
 
 #: src/components/BaseQuestionnaireResponseForm/readonly-widgets/boolean.tsx:22
 msgid "False"
+msgstr ""
+
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:35
+msgid "Female"
 msgstr ""
 
 #: src/components/TextWithMacroFill/index.tsx:40
@@ -819,6 +823,10 @@ msgstr ""
 msgid "Made with"
 msgstr ""
 
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:33
+msgid "Male"
+msgstr ""
+
 #: src/components/DashboardCard/creatinine.tsx:91
 msgid "Max"
 msgstr ""
@@ -990,6 +998,10 @@ msgstr ""
 msgid "Orders"
 msgstr ""
 
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:37
+msgid "Other"
+msgstr ""
+
 #: src/containers/PatientDetails/PatientDetailsTabs/index.tsx:18
 #: src/containers/PatientDetails/PatientHeader/index.tsx:47
 #: src/containers/PatientDetails/PatientHeader/index.tsx:90
@@ -1050,7 +1062,7 @@ msgid "PCT"
 msgstr ""
 
 #: src/containers/App/DefaultUserWithNoRoles.tsx:31
-#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:45
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:61
 msgid "Phone number"
 msgstr ""
 
@@ -1287,7 +1299,7 @@ msgstr ""
 msgid "Set password"
 msgstr ""
 
-#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:37
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:53
 msgid "Sex"
 msgstr ""
 
@@ -1525,6 +1537,8 @@ msgstr ""
 #: src/containers/DocumentsList/hooks.ts:52
 #: src/containers/InvoiceList/tableUtils.tsx:34
 #: src/containers/PatientDetails/PatientDocumentDetails/ExternalDocumentView/index.tsx:53
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:39
+#: src/containers/PatientDetails/PatientOverviewDynamic/containers/GeneralIInformationDashboardContainer/hooks.ts:41
 #: src/containers/Prescriptions/components/PrescriptionsSearchBar/hooks.ts:125
 #: src/containers/Prescriptions/index.tsx:192
 #: src/containers/Scheduling/available-time.ts:22
