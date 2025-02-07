@@ -1,6 +1,7 @@
 import { Organization, ParametersParameter, Patient, Practitioner, QuestionnaireResponse } from 'fhir/r4b';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { t } from '@lingui/macro';
 
 import { RenderRemoteData, WithId } from '@beda.software/fhir-react';
 import { RemoteData, isSuccess, notAsked } from '@beda.software/remote-data';
@@ -61,7 +62,7 @@ export function PatientDocument(props: PatientDocumentProps) {
                                     'depression-score': DepressionScore,
                                 }}
                                 onCancel={() => navigate(-1)}
-                                saveButtonTitle={'Complete'}
+                                saveButtonTitle={t`Complete`}
                                 autoSave={!provenance}
                                 draftSaveResponse={draftSaveResponse}
                                 setDraftSaveResponse={setDraftSaveResponse}
@@ -79,7 +80,7 @@ function useSavedMessage(draftSaveResponse: RemoteData) {
 
     useEffect(() => {
         if (isSuccess(draftSaveResponse)) {
-            setSavedMessage('Saved');
+            setSavedMessage(t`Saved`);
 
             const timeoutId = setTimeout(() => {
                 setSavedMessage('');

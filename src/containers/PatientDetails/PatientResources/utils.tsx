@@ -32,7 +32,7 @@ export function getOptions(patient: WithId<Patient>): Option[] {
     return [
         {
             value: 'active-medications',
-            label: t`Active Medications`,
+            label: t`Medications Statements`,
             renderTable: (option: Option) => (
                 <ResourceTable<MedicationStatement>
                     key={`resource-table-${option.value}`}
@@ -145,7 +145,7 @@ export function getOptions(patient: WithId<Patient>): Option[] {
         },
         {
             value: 'immunization',
-            label: t`Immunization`,
+            label: t`Immunizations`,
             renderTable: (option: Option) => (
                 <ResourceTable<Immunization>
                     key={`resource-table-${option.value}`}

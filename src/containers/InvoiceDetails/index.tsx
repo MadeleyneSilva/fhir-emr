@@ -14,6 +14,7 @@ import { useInvoiceDetails, useInvoiceLineItems } from './hooks';
 import { S } from './InvoiceDetails.styles';
 import { InvoiceDetailsLineItemsProps } from './types';
 import { formatMoney } from '../InvoiceList/utils';
+import { Empty } from 'antd';
 
 export function InvoiceDetails() {
     const { id } = useParams<{ id: string }>();
@@ -65,6 +66,13 @@ function LineItemsTable(props: InvoiceDetailsLineItemsProps) {
                     pagination={false}
                     bordered
                     dataSource={lineItems}
+                    locale={{
+                        emptyText: (
+                            <>
+                                <Empty description={<Trans>No data</Trans>} image={Empty.PRESENTED_IMAGE_SIMPLE} />
+                            </>
+                        ),
+                    }}
                     columns={[
                         {
                             title: t`Item`,
@@ -97,7 +105,7 @@ function LineItemsTable(props: InvoiceDetailsLineItemsProps) {
                             render: (_text, resource) => formatMoney(resource.tax?.[0]?.amount?.value ?? 0),
                         },
                         {
-                            title: t`Amount`,
+                            title: t`Total Amount`,
                             dataIndex: 'amount',
                             key: 'amount',
                             align: 'right',

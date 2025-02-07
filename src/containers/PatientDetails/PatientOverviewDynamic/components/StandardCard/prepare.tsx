@@ -193,7 +193,7 @@ export function prepareImmunizations(
     to?: string,
 ): OverviewCard<Immunization> {
     return {
-        title: t`Immunization`,
+        title: t`Immunizations`,
         key: 'immunization',
         icon: <HeartOutlined />,
         data: observations,
@@ -229,7 +229,7 @@ export function prepareMedications(
     to?: string,
 ): OverviewCard<MedicationStatement> {
     return {
-        title: t`Active Medications`,
+        title: t`Medications Statements`,
         key: 'active-medications',
         icon: <img src={medicationIcon} />,
         data: observations,
@@ -297,7 +297,7 @@ export function prepareServiceRequest(
     total: number,
 ): OverviewCard<ServiceRequest> {
     return {
-        title: t`Orders`,
+        title: t`Observations`,
         key: 'service-request',
         icon: <HeartOutlined />,
         data: serviceRequests,

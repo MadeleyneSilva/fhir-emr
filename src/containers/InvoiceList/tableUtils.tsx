@@ -140,7 +140,7 @@ export function getInvoiceTableColumns(
             render: (_text, resource) => <InvoiceStatus invoice={resource} />,
         },
         {
-            title: <Trans>Amount</Trans>,
+            title: <Trans>Total Amount</Trans>,
             dataIndex: 'amount',
             key: 'amount',
             width: '10%',
