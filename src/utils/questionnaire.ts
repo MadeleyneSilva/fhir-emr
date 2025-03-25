@@ -72,7 +72,10 @@ export function getDisplay(
     return '';
 }
 
-export function getArrayDisplay(options?: QuestionnaireResponseItemAnswer[], choiceColumn?: QuestionnaireItemChoiceColumn[]): string | null {
+export function getArrayDisplay(
+    options?: QuestionnaireResponseItemAnswer[],
+    choiceColumn?: QuestionnaireItemChoiceColumn[],
+): string | null {
     if (!options) {
         return null;
     }
@@ -85,21 +88,29 @@ export function questionnaireItemsToValidationSchema(questionnaireItems: Questio
     if (questionnaireItems.length === 0) return yup.object(validationSchema) as yup.AnyObjectSchema;
     questionnaireItems.forEach((item) => {
         let schema: yup.AnySchema;
+        const fieldName = item.text ?? t`This field`;
+
         if (item.type === 'string' || item.type === 'text') {
             schema = yup.string();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             if (item.maxLength && item.maxLength > 0) schema = (schema as yup.StringSchema).max(item.maxLength);
             schema = createSchemaArrayOfValues(yup.object({ string: schema })).required();
         } else if (item.type === 'integer') {
             schema = yup.number();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             schema = createSchemaArrayOfValues(yup.object({ integer: schema })).required();
         } else if (item.type === 'date') {
             schema = yup.date();
-            if (item.required) schema = schema.required();
+            if (item.required) schema = schema.required(t`${fieldName} is required`);
             schema = createSchemaArrayOfValues(yup.object({ date: schema })).required();
         } else {
-            schema = item.required ? yup.array().of(yup.mixed()).min(1).required() : yup.mixed().nullable();
+            schema = item.required
+                ? yup
+                      .array()
+                      .of(yup.mixed())
+                      .min(1)
+                      .required(t`${fieldName} is required`)
+                : yup.mixed().nullable();
         }
 
         if (item.enableWhen) {

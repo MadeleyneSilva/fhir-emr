@@ -14,6 +14,7 @@ import { evaluate } from 'src/utils';
 import { getAnswerCode, getAnswerDisplay } from 'src/utils/questionnaire';
 
 import { useFieldController } from '../hooks';
+import { t } from '@lingui/macro';
 
 export type AnswerReferenceProps<R extends Resource, IR extends Resource> = QuestionItemProps & {
     overrideGetDisplay?: (resource: R, includedResources: ResourcesMap<R | IR>) => string;
@@ -110,9 +111,8 @@ export function useAnswerReference<R extends Resource = any, IR extends Resource
             return overrideGetDisplay;
         }
 
-        return (resource: R, includedResources: ResourcesMap<R|IR>) => evaluate(
-            resource, choiceColumn![0]!.path!,
-            {
+        return (resource: R, includedResources: ResourcesMap<R | IR>) =>
+            evaluate(resource, choiceColumn![0]!.path!, {
                 ...context,
                 ...includedResources,
                 resource,
@@ -179,7 +179,7 @@ export function useAnswerReference<R extends Resource = any, IR extends Resource
         fieldController,
         text,
         repeats,
-        placeholder: entryFormat,
+        placeholder: t`Select...`,
         choiceColumn,
     };
 }

@@ -1,6 +1,7 @@
 import { TablePaginationConfig } from 'antd';
 import { Resource } from 'fhir/r4b';
 import { useState } from 'react';
+import { t } from '@lingui/macro';
 
 import { SearchParams, usePager } from '@beda.software/fhir-react';
 import { isSuccess } from '@beda.software/remote-data';
@@ -39,6 +40,9 @@ export function usePagerExtended<T extends Resource, F = unknown>(
         current: pagerManager.currentPage,
         pageSize: pageSize,
         total: isSuccess(resourceResponse) ? resourceResponse.data.total : 0,
+        locale: {
+            items_per_page: t`/ page`,
+        },
     };
 
     return { resourceResponse, pagerManager, handleTableChange, pagination };
