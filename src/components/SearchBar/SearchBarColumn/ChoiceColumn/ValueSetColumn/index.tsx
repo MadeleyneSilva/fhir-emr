@@ -2,6 +2,7 @@ import { AsyncSelect } from 'src/components/Select';
 
 import { SearchBarColumnChoiceTypeProps } from '../../types';
 import { useChoiceColumn } from '../hooks';
+import { t } from '@lingui/macro';
 
 export function ValueSetColumn(props: SearchBarColumnChoiceTypeProps) {
     const { columnFilterValue, defaultOpen } = props;
@@ -21,6 +22,8 @@ export function ValueSetColumn(props: SearchBarColumnChoiceTypeProps) {
             placeholder={placeholder}
             defaultMenuIsOpen={defaultOpen}
             isClearable
+            loadingMessage={() => t`Loading...`}
+            noOptionsMessage={() => t`No options`}
         />
     );
 }

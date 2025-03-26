@@ -3,6 +3,7 @@ import { getAnswerCode, getAnswerDisplay } from 'src/utils/questionnaire';
 
 import { useReferenceColumn } from './hooks';
 import { SearchBarColumnReferenceTypeProps } from '../types';
+import { t } from '@lingui/macro';
 
 export function ReferenceColumn(props: SearchBarColumnReferenceTypeProps) {
     const { columnFilterValue, defaultOpen } = props;
@@ -21,6 +22,8 @@ export function ReferenceColumn(props: SearchBarColumnReferenceTypeProps) {
             placeholder={columnFilterValue.column.placeholder}
             defaultMenuIsOpen={defaultOpen}
             isClearable
+            loadingMessage={() => t`Loading...`}
+            noOptionsMessage={() => t`No options`}
         />
     );
 }

@@ -24,10 +24,21 @@ interface ChoiceQuestionSelectProps {
     repeats?: boolean;
     placeholder?: string;
     choiceColumn?: QuestionnaireItemChoiceColumn[];
+    noOptionsMessage?: () => string; //mensaje de sin resultados
+    loadingMessage?: () => string; // mensaje de loading
 }
 
 export function ChoiceQuestionSelect(props: ChoiceQuestionSelectProps) {
-    const { value, onChange, options, repeats = false, placeholder = t`Select...`, choiceColumn } = props;
+    const {
+        value,
+        onChange,
+        options,
+        repeats = false,
+        placeholder = t`Select...`,
+        choiceColumn,
+        noOptionsMessage = () => t`No options`,
+        loadingMessage = () => t`Loading...`,
+    } = props;
 
     return (
         <>
@@ -43,6 +54,8 @@ export function ChoiceQuestionSelect(props: ChoiceQuestionSelectProps) {
                 getOptionLabel={(o) => (getDisplay(o.value, choiceColumn) as string) || ''}
                 classNamePrefix="react-select"
                 placeholder={placeholder}
+                noOptionsMessage={noOptionsMessage}
+                loadingMessage={loadingMessage}
             />
         </>
     );
@@ -64,6 +77,8 @@ export function QuestionChoice({ parentPath, questionItem }: QuestionItemProps) 
                     repeats={repeats}
                     placeholder={placeholder}
                     choiceColumn={choiceColumn}
+                    noOptionsMessage={() => t`No options`}
+                    loadingMessage={() => t`Loading...`}
                 />
             </Form.Item>
         );
@@ -78,6 +93,8 @@ export function QuestionChoice({ parentPath, questionItem }: QuestionItemProps) 
                 repeats={repeats}
                 placeholder={placeholder}
                 choiceColumn={choiceColumn}
+                noOptionsMessage={() => t`No options`}
+                loadingMessage={() => t`Loading...`}
             />
         </Form.Item>
     );
@@ -90,10 +107,21 @@ interface ChoiceQuestionValueSetProps {
     repeats?: boolean;
     placeholder?: string;
     choiceColumn?: QuestionnaireItemChoiceColumn[];
+    noOptionsMessage?: () => string;
+    loadingMessage?: () => string;
 }
 
 export function ChoiceQuestionValueSet(props: ChoiceQuestionValueSetProps) {
-    const { answerValueSet, value, onChange, repeats = false, placeholder, choiceColumn } = props;
+    const {
+        answerValueSet,
+        value,
+        onChange,
+        repeats = false,
+        placeholder,
+        choiceColumn,
+        noOptionsMessage,
+        loadingMessage,
+    } = props;
     const expand = useContext(ValueSetExpandProvider);
 
     const loadOptions = useCallback(
@@ -117,6 +145,8 @@ export function ChoiceQuestionValueSet(props: ChoiceQuestionValueSetProps) {
             isMulti={repeats}
             getOptionLabel={(o) => (getDisplay(o.value, choiceColumn) as string) || ''}
             placeholder={placeholder}
+            loadingMessage={loadingMessage}
+            noOptionsMessage={noOptionsMessage}
         />
     );
 }

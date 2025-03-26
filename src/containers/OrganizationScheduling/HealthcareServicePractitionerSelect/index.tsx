@@ -5,6 +5,7 @@ import { AsyncSelect } from 'src/components/Select';
 import { S } from './HealthcareServicePractitionerSelect.styles';
 import { AsyncDropdownProps, HealthcareServicePractitionerSelectProps, OptionType } from './types';
 import { getSelectedValue } from '../utils';
+import { t } from '@lingui/macro';
 
 export function HealthcareServicePractitionerSelect(props: HealthcareServicePractitionerSelectProps) {
     const {
@@ -61,6 +62,8 @@ export function AsyncDropdown(props: AsyncDropdownProps) {
             maxMenuHeight={90}
             placeholder={placeholder}
             isClearable
+            loadingMessage={() => t`Loading...`}
+            noOptionsMessage={() => t`No options`}
         />
     );
 }

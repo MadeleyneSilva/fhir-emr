@@ -204,6 +204,8 @@ function QuestionReferenceUnsafe<R extends Resource = any, IR extends Resource =
                         getOptionValue={(option) => getAnswerCode(option.value)}
                         isMulti={repeats}
                         placeholder={placeholder}
+                        loadingMessage={() => t`Loading...`}
+                        noOptionsMessage={() => t`No options`}
                     />
                 </Form.Item>
             )}

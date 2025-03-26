@@ -294,7 +294,7 @@ msgid "Close"
 msgstr ""
 
 #: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:177
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:514
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:516
 msgid "Code"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgstr ""
 msgid "Completed"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:494
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:496
 msgid "Concepts:"
 msgstr ""
 
@@ -468,11 +468,11 @@ msgstr ""
 msgid "Describe what to adjust in the questionnaire"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:482
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:484
 msgid "Description:"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:508
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:510
 msgid "Display"
 msgstr ""
 
@@ -779,6 +779,17 @@ msgstr ""
 msgid "Listen to the audio"
 msgstr ""
 
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:40
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:81
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:97
+#: src/components/BaseQuestionnaireResponseForm/widgets/reference.tsx:207
+#: src/components/SearchBar/SearchBarColumn/ChoiceColumn/ValueSetColumn/index.tsx:25
+#: src/components/SearchBar/SearchBarColumn/ReferenceColumn/index.tsx:25
+#: src/containers/OrganizationScheduling/HealthcareServicePractitionerSelect/index.tsx:65
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:427
+msgid "Loading..."
+msgstr ""
+
 #: src/containers/SignIn/index.tsx:89
 msgid "Log in"
 msgstr ""
@@ -887,7 +898,7 @@ msgstr ""
 #: src/containers/PatientDetails/PatientWearables/index.tsx:85
 #: src/containers/PatientList/index.tsx:71
 #: src/containers/PractitionerList/index.tsx:99
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:500
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:502
 #: src/containers/QuestionnaireList/index.tsx:100
 #: src/uberComponents/ResourceListPage/index.tsx:214
 msgid "No data"
@@ -895,6 +906,17 @@ msgstr "Нет данных"
 
 #: src/containers/PatientDetails/PatientOverviewDynamic/components/PatientNoteListCard/NoteList/index.tsx:27
 msgid "No notes"
+msgstr ""
+
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:39
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:80
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:96
+#: src/components/BaseQuestionnaireResponseForm/widgets/reference.tsx:208
+#: src/components/SearchBar/SearchBarColumn/ChoiceColumn/ValueSetColumn/index.tsx:26
+#: src/components/SearchBar/SearchBarColumn/ReferenceColumn/index.tsx:26
+#: src/containers/OrganizationScheduling/HealthcareServicePractitionerSelect/index.tsx:66
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:428
+msgid "No options"
 msgstr ""
 
 #: src/components/TextWithMacroFill/index.tsx:30
@@ -1222,7 +1244,7 @@ msgstr ""
 msgid "See all"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:433
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:435
 msgid "See ValueSet details"
 msgstr ""
 
@@ -1234,8 +1256,8 @@ msgstr ""
 msgid "Select all"
 msgstr ""
 
-#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:30
-#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:55
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:37
+#: src/components/BaseQuestionnaireResponseForm/widgets/choice/index.tsx:68
 #: src/components/BaseQuestionnaireResponseForm/widgets/reference.tsx:182
 msgid "Select..."
 msgstr ""
@@ -1516,7 +1538,7 @@ msgstr ""
 msgid "Upload file"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:487
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:489
 msgid "Url:"
 msgstr ""
 
@@ -1534,7 +1556,7 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:431
+#: src/containers/QuestionnaireBuilder/QuestionnaireItemSettings/controls.tsx:433
 msgid "ValueSet details"
 msgstr ""
 

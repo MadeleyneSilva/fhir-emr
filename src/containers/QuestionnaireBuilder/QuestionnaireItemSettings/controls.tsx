@@ -424,6 +424,8 @@ function ValueSetField(props: ValueSetFieldProps) {
                             )}
                             getOptionValue={(option) => `ValueSet/${option.id}`}
                             isMulti={false}
+                            loadingMessage={() => t`Loading...`}
+                            noOptionsMessage={() => t`No options`}
                         />
                         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                             {valueSet && (
